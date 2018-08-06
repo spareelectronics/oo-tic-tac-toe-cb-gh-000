@@ -41,21 +41,21 @@ def turn
   puts "Please enter 1-9:"
   input_to_index
   if valid_move?
-    move(@board, @index, current_player(@board))
-    display_board(@board)
+    move
+    display_board
   else
-    turn(@board)
+    turn
   end
 end
 
 def play
 
-  until over?(@board)
-    turn(@board)
+  until over?
+    turn
   end
 
-  if won?(@board)
-    puts "Congratulations #{winner(@board)}!"
+  if won?
+    puts "Congratulations #{winner}!"
   else
     puts "Cat's Game!"
   end
