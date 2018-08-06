@@ -61,6 +61,47 @@ def play
   end
 end
 
+#Helper methods
+
+def won?
+
+  WIN_COMBINATIONS.detect do |win|
+    position_taken?(@board,win[0]) && (@board[win[0]] == @board[win[1]] && @board[win[1]] == @board[win[2]])
+  end
+end
+
+def full?(board)
+  board.all?{|index| index == "X" || index == "O"}
+end
+
+def draw?(board)
+  !won?(board) && full?(board)
+end
+
+def over?(board)
+  won?(board) || draw?(board) ||  full?(board)
+end
+
+def winner(board)
+  if over?(board)
+    board[won?(board)[0]]
+  end
+end
+
+
+def turn_count(board)
+  counter = 0
+  board.each do |position|
+    if (position == "X" || position == "O")
+      counter += 1
+    end
+  end
+  counter
+end
+
+def current_player(board)
+  (turn_count(board)).even? ? "X" : "O"
+end
 
 
 
