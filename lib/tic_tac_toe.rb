@@ -69,7 +69,7 @@ end
 def won?
 
   WIN_COMBINATIONS.detect do |win|
-    position_taken?(@board,win[0]) && (@board[win[0]] == @board[win[1]] && @board[win[1]] == @board[win[2]])
+    (@board[win[0]] == "X" || @board[win[0]] == "O") && (@board[win[0]] == @board[win[1]] && @board[win[1]] == @board[win[2]])
   end
 end
 
