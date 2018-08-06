@@ -111,3 +111,5 @@ end
 def position_taken?
   !(@board[@index].nil? || @board[@index] == " " || @board[@index] == "")
 end
+
+end
