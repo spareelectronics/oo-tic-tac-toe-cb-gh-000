@@ -89,7 +89,7 @@ def winner
 end
 
 
-def turn_count(
+def turn_count
   counter = 0
   @board.each do |position|
     if (position == "X" || position == "O")
@@ -99,8 +99,8 @@ def turn_count(
   counter
 end
 
-def current_player(board)
-  (turn_count(board)).even? ? "X" : "O"
+def current_player
+  (turn_count(@board)).even? ? "X" : "O"
 end
 
 
