@@ -61,7 +61,10 @@ def play
   end
 end
 
-#Helper methods
+#..............#
+#Helper Methods#
+#..............#
+
 
 def won?
 
