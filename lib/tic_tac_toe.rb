@@ -39,8 +39,8 @@ end
 
 def turn
   puts "Please enter 1-9:"
+  input_to_index
   
-  @index = input_to_index(input)
   if valid_move?(@board, @index)
     move(@board, @index, current_player(@board))
     display_board(@board)
