@@ -111,10 +111,3 @@ def position_taken?
 end
 
 end #class
-
-
-
-
-
-
-
