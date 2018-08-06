@@ -78,20 +78,20 @@ def draw?
   !won?(@board) && full?(@board)
 end
 
-def over?(board)
-  won?(board) || draw?(board) ||  full?(board)
+def over?
+  won?(@board) || draw?(@board) ||  full?(@board)
 end
 
-def winner(board)
-  if over?(board)
-    board[won?(board)[0]]
+def winner
+  if over?(@board)
+    @board[won?(@board)[0]]
   end
 end
 
 
-def turn_count(board)
+def turn_count(
   counter = 0
-  board.each do |position|
+  @board.each do |position|
     if (position == "X" || position == "O")
       counter += 1
     end
