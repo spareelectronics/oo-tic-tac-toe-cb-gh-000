@@ -106,10 +106,15 @@ def current_player
   turn_count.even? ? "X" : "O"
 end
 
-end
-
 def position_taken?
   !(@board[@index].nil? || @board[@index] == " " || @board[@index] == "")
 end
 
-end
+end #class
+
+
+
+
+
+
+
