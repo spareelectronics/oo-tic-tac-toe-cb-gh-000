@@ -82,12 +82,12 @@ def draw?
 end
 
 def over?
-  won?(@board) || draw?(@board) ||  full?(@board)
+  won? || draw? || full?
 end
 
 def winner
-  if over?(@board)
-    @board[won?(@board)[0]]
+  if over?
+    @board[won?[0]]
   end
 end
 
