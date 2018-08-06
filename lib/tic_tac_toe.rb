@@ -48,7 +48,7 @@ def turn
   end
 end
 
-def play(board)
+def play
 
   until over?(@board)
     turn(@board)
