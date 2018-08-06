@@ -103,12 +103,4 @@ def current_player
   (turn_count(@board)).even? ? "X" : "O"
 end
 
-
-
-
-
-
-
-
-
 end
